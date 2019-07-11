@@ -1,4 +1,4 @@
-<h1>MOLANG DOCUMENTATION </br>Version: 1.13.0.1</h1>
+<h1>MOLANG DOCUMENTATION </br>Version: 1.13.0.2</h1>
 This is documentation for a beta release of Minecraft. New features, components, and capabilities in this release are not final and might change without notice before the final release.<br/>Be sure to check the documentation once the release is out of beta if your add-on isn't working properly. Resource and Behavior Packs created for the beta are not guaranteed to work on the final release.<br/>
 <h2><p id="Index">Index</p></h2>
 <table border="1">
@@ -443,7 +443,7 @@ Query Functions are boolean expressions that allow you to query for values owned
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.get_equipped_item_name</td>
-<td style="border-style:solid; border-width:3; padding:7px">takes one optional hand slot index as a parameter (0 for main hand, 1 for off hand), and returns the name of the item in the requested slot (defaulting to the main hand if no parameter is supplied) if there is one, otherwise returns ''.</br></td>
+<td style="border-style:solid; border-width:3; padding:7px">takes one optional hand slot as a parameter (0 or 'main_hand' for main hand, 1 or 'off_hand' for off hand), and returns the name of the item in the requested slot (defaulting to the main hand if no parameter is supplied) if there is one, otherwise returns ''.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.get_name</td>
@@ -774,6 +774,10 @@ Query Functions are boolean expressions that allow you to query for values owned
 <td style="border-style:solid; border-width:3; padding:7px">Returns the amount of time an item has been in use in seconds up to the maximum duration, else 0.0 if it doesn't make sense</br></td>
 </tr>
 <tr>
+<td style="border-style:solid; border-width:3; padding:7px">query.item_is_charged</td>
+<td style="border-style:solid; border-width:3; padding:7px">takes one optional hand slot as a parameter (0 or 'main_hand' for main hand, 1 or 'off_hand' for off hand), and returns 1.0 if the item is charged in the requested slot (defaulting to the main hand if no parameter is supplied), otherwise returns 0.0.</br></td>
+</tr>
+<tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.item_max_use_duration</td>
 <td style="border-style:solid; border-width:3; padding:7px">Returns the maximum amount of time the item can be used, else 0.0 if it doesn't make sense</br></td>
 </tr>
@@ -800,10 +804,6 @@ Query Functions are boolean expressions that allow you to query for values owned
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.log</td>
 <td style="border-style:solid; border-width:3; padding:7px">debug log a value</br></td>
-</tr>
-<tr>
-<td style="border-style:solid; border-width:3; padding:7px">query.main_hand_item_is_charged</td>
-<td style="border-style:solid; border-width:3; padding:7px">returns if the item in the main hand is fully charged.</br></td>
 </tr>
 <tr>
 <td style="border-style:solid; border-width:3; padding:7px">query.main_hand_item_max_duration</td>

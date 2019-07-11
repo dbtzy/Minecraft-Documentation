@@ -1,7 +1,9 @@
-<h1>PARTICLES DOCUMENTATION </br>Version: 1.13.0.1</h1>
+<h1>PARTICLES DOCUMENTATION </br>Version: 1.13.0.2</h1>
 This is documentation for a beta release of Minecraft. New features, components, and capabilities in this release are not final and might change without notice before the final release.<br/>Be sure to check the documentation once the release is out of beta if your add-on isn't working properly. Resource and Behavior Packs created for the beta are not guaranteed to work on the final release.<br/>
 <h2><p id="Index">Index</p></h2>
 <table border="1">
+<tr> <th><a href="#Particles Examples Pack">Particles Examples Pack</a></th> </tr>
+<tr> <td> <a href="#"> </a> </tr> </td>
 <tr> <th><a href="#Component Concept">Component Concept</a></th> </tr>
 <tr> <th><a href="#Namespacing">Namespacing</a></th> </tr>
 <tr> <th><a href="#MoLang integration">MoLang integration</a></th> </tr>
@@ -29,6 +31,89 @@ This is documentation for a beta release of Minecraft. New features, components,
 <tr> <td> <a href="#"> </a> </tr> </td>
 </table>
 <a href="#Index">Back to top</a>
+<h1><p id="Particles Examples Pack">Particles Examples Pack</p></h1>
+
+https://aka.ms/MCParticlesPack</br></br>Examples of various particles can be found in the link above.  These are examples of various stand-alone particle effects.  The particle effects provided as part of the Minecraft installation are tuned to be used with the Minecraft game, and thus do not serve as good examples.  Please refer to the examples in the pack to see various ways to utilize the particle system. </br></br>To invoke an example particle with the examples particles pack enabled, bring up the console, type "/particle name x y z" where "name" is the name of the particle effect, and x/y/z are the coordinates the particle appears at.</br></br>For example, "/particle minecraft:example_smoke_puff 0 5 0" will spawn a smoke puff at the origin of the world, 5 blocks up from the bottom of the world. </br>"/particle minecraft:example_smoke_puff ~ ~1 ~5" will create that smoke puff about 5 blocks away from the player.</br><h2>Example Effects</h2>
+
+<table border="1" style="width:100%; border-style:solid; border-collapse:collapse; border-width:3;">
+<tr> <th style="border-style:solid; border-width:3;">Name</th> <th style="border-style:solid; border-width:3;">Description</th> </tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_beziercurve</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a bezier curve in an effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_bounce</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates collision detection and bouncing for particles</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_catmullromcurve</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a catmull-rom curve in an effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_colorcurve</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a color-gradient approach to color variation in an effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_colorcurve2</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a color-gradient approach with variable spacing in an effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_combocurve</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of a variety of curves in an effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_directional_sphere</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates the use of directional billboard facing in an effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_entity_sparkle_box</td>
+<td style="border-style:solid; border-width:3; padding:7px">When attached to an entity, this effect creates a sparkle effect in a box around the entity</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_entity_sparkle_aabb</td>
+<td style="border-style:solid; border-width:3; padding:7px">When attached to an entity, this effect creates a sparkle effect with the rough axis-aligned bounding box around the entity</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_expire_on_contact</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates particles disappearing when colliding with the terrain</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_flipbook</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates texture uv flipbook technique, of applying successive frames of a texture for visual animation</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_highrestitution</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates particle collision with particles gaining energy on each bounce</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_linearcurve</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates a piecewise linear curve in an effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_particle_event_system</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates various particle events executing</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_smoke_puff</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates a general smoke puff effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_spiral</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates a parametric motion spiral effect</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:example_watertest</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates excluding particles from various block types, in this case, particles only survive in water</br></td>
+</tr>
+<tr>
+<td style="border-style:solid; border-width:3; padding:7px">minecraft:fireworks_events_demo</td>
+<td style="border-style:solid; border-width:3; padding:7px">Demonstrates sequencing various particle effects together via events to create a fireworks effect</br></td>
+</tr>
+</table>
+<a href="#Index">Back to top</a><br><br>
+
+<br><br>
+
 <h1><p id="Component Concept">Component Concept</p></h1>
 
 The particle system is component based.  What this means is that particle effects are composed via a set of components.  In order for an effect to do something, you add a component that handles that aspect of the effect.  For example, an emitter usually needs to have rules for its lifetime, thus the effect should have one or more lifetime components that handle lifetime duties for the emitter and emitted particles.</br></br>The idea is that new components can be added later, and one can combine components (where it makes sense) to get different behaviors. A particle might have a Dynamic component for moving around, and a Collision component for handling interaction with the terrain, for example.</br></br>Think of components as telling the particle system what you want the emitter or particle to do, rather than exposing a list of particle parameters and having to wrangle those parameters to get the desired behavior.</br><a href="#Index">Back to top</a><br><br>
@@ -350,11 +435,12 @@ For fields in these components, the following shorthand is used:<br / ><textarea
 
 <h3><p id="Emitter Local Space component">Emitter Local Space component</p></h3>
 
-This component specifies the frame of reference of the emitter.  Applies only when the emitter is attached to an entity.  When 'position' is true, the particles will simulate in entity space, otherwise they will simulate in world space.  Rotation works the same way for rotation. Default is false for both, which makes the particles emit relative to the emitter, then simulate independently from the emitter. Note that rotation = true and position = false is an invalid option.</br><h4></h4>
-<br / ><textarea readonly="true" cols="35" rows="5">
+This component specifies the frame of reference of the emitter.  Applies only when the emitter is attached to an entity.  When 'position' is true, the particles will simulate in entity space, otherwise they will simulate in world space.  Rotation works the same way for rotation. Default is false for both, which makes the particles emit relative to the emitter, then simulate independently from the emitter. Note that rotation = true and position = false is an invalid option.  Velocity will add the emitter's velocity to the initial particle velocity.</br><h4></h4>
+<br / ><textarea readonly="true" cols="35" rows="6">
 "minecraft:emitter_local_space": {
     "position": <bool>
     "rotation": <bool>
+    "velocity": <bool>
 }
 </textarea> </br>
 <a href="#Index">Back to top</a><br><br>
@@ -888,6 +974,9 @@ Color tinting of the particle is controlled by this component:</br><h4></h4>
 
     // directly set the color
     "color": <color>
+    // examples of direct color field:
+    "color": "#ff0000"
+    "color": [1, 0, 0]
 },
 
 </textarea> </br>
